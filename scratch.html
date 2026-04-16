@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Plan</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #f0f7ff, #e6f0fa);
+      color: #2e3d4f;
+      line-height: 1.6;
+    }
+
+    /* Top Navigation */
+    .topnav {
+      background: rgba(52, 104, 153, 0.95);
+      padding: 16px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .topnav a:hover {
+      color: #cfe6ff;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Header */
+    .header {
+      min-height: 85vh;
+      background:
+        linear-gradient(rgba(28, 62, 97, 0.55), rgba(28, 62, 97, 0.55)),
+        url("noah.jpeg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .header-overlay {
+      max-width: 760px;
+      color: white;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(6px);
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 12px;
+      color: #d9ecff;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      margin-bottom: 24px;
+      color: #f4f9ff;
+    }
+
+    .jump-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #8cc4ff;
+      color: #1f4163;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    .jump-link:hover {
+      background: white;
+      transform: translateY(-2px);
+    }
+
+    /* Main Content */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* Sections */
+    .section {
+      background: #f9fcff;
+      padding: 32px;
+      margin-bottom: 28px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(70, 120, 180, 0.08);
+      border: 1px solid #d8e8f7;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #2f5f91;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #c5ddf3;
+      padding-bottom: 8px;
+    }
+
+    .section p,
+    .section li {
+      font-size: 1rem;
+      color: #445565;
+    }
+
+    ol,
+    ul {
+      padding-left: 22px;
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Image section */
+    .three {
+      text-align: center;
+    }
+
+    .three img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 18px;
+      margin-top: 16px;
+      box-shadow: 0 12px 28px rgba(28, 62, 97, 0.16);
+    }
+
+    .caption {
+      margin-top: 14px;
+      font-style: italic;
+      color: #62788f;
+    }
+
+    /* Media boxes */
+    .media-box,
+    .tableau-box {
+      margin-top: 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(28, 62, 97, 0.12);
+      background: #edf5fc;
+    }
+
+    iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      display: block;
+      border-radius: 18px;
+    }
+
+    /* Links */
+    .links {
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px 10px 0;
+      padding: 12px 22px;
+      background: #3f7fc0;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background: #5a98d8;
+      transform: translateY(-2px);
+    }
+
+    /* Section accents */
+    .one {
+      border-left: 6px solid #9ecbff;
+    }
+
+    .two {
+      border-left: 6px solid #7fb8f5;
+    }
+
+    .three {
+      border-left: 6px solid #5da5ea;
+    }
+
+    .four {
+      border-left: 6px solid #468fd4;
+    }
+
+    .five {
+      border-left: 6px solid #2f78bf;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2.2rem;
+      }
+
+      .intro {
+        font-size: 1rem;
+      }
+
+      .topnav {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 14px 20px;
+      }
+
+      .section {
+        padding: 24px;
+      }
+
+      iframe {
+        height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="resume.html">Resume</a>
+    <a href="app.html">Game</a>
+  </nav>
+
+  <header class="header" id="top">
+    <div class="header-overlay">
+      <p class="eyebrow">Entrepreneurship Project</p>
+      <h1>Business Plan</h1>
+      <p class="intro">
+        Helping local business improve their online visibility and generate more leads. My plan is to begin with a real business I already have access to so I can test strategies, track results, and prove what works before expanding. I want to focus on improving online presence, attracting more customers, and measuring real outcomes like calls and leads. As I gain experience, I will refine my process and use those results to grow into a long-term business.
+      </p>
+      <a class="jump-link" href="#video-section">Watch the Video</a>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+
+    <section class="section one">
+      <h2>Why I Want to Start My Own Business<h2>
+      <p>
+        I want to start my own business so I can build something that is truly mine and create real value for others. I like the idea of being in control of my work, making important decisions, and seeing the direct results of my effort. I also want the opportunity to grow financially while helping businesses solve problems, especially by improving their visibility and bringing them more opportunities. Starting my own business will allow me to learn, take risks, and create something that can continue growing over time.
+      </p>
+    </section>
+
+    <section class="section two">
+      <h2>Important Skills for Starting a Business</h2>
+      <ol>
+        <li>Sales – getting clients and confidently closing deals.</li>
+        <li>Communication – clearly explaining your value and building trust.</li>
+        <li>Discipline – staying consistent even when results are not immediate.</li>
+        <li>Marketing – attracting leads and getting attention online.</li>
+        <li>Problem-solving – figuring things out and adapting when needed.</li>
+        <li>Time management – focusing on the tasks that actually grow the business.</li>
+      </ol>
+    </section>
+
+    <div class="section three">
+      <h2>Who is Noah Peterson?</h2>
+      <img src="noah.jpeg" alt="Aleigha Sports Reporting Image">
+      <p class="caption">
+        Me!
+      </p>
+    </div>
+
+    <div class="section four" id="video-section">
+      <h2>Entrepreneur Video</h2>
+      <p>
+        Check out this video that demonstrates what it's like to be an entrepreneur!
+      </p>
+      <div class="media-box">
+        <iframe 
+          src="https://youtu.be/h-KHWUq3B7I?si=0BzIlfocwDCeUjlw" 
+          title="entrepreneur"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+
+    <section class="section five">
+      <h2>Interactive Tableau Graph</h2>
+      <p>
+        Check out this interactive Tableau graph.
+      </p>
+      <div class="media-box tableau-box">
+        <iframe
+          src="https://public.tableau.com/views/RegionalSampleWorkbook/College?:showVizHome=no"
+          title="Interactive Tableau Graph">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="section links">
+      <h2>Explore More</h2>
+      <a href="app.html">Go to My Game</a>
+      <a href="#top">Back to Top</a>
+      <a href="index.html">Back to Home</a>
+    </section>
+
+  </main>
+
+</body>
+</html>
