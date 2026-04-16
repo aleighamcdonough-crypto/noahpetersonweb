@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah Peterson - All About Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f2ec;
+      color: #2f261f;
+    }
+
+    .navbar {
+      background-color: #6b4d3a;
+      padding: 18px 0;
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .brand,
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(64,46,35,0.28), rgba(64,46,35,0.28)),
+        url("images/noah.jpg") center/cover no-repeat;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .hero-box {
+      background: rgba(0,0,0,0.32);
+      padding: 42px 34px;
+      border-radius: 24px;
+      max-width: 760px;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+
+    .button-row a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      margin: 8px;
+    }
+
+    .btn-primary {
+      background-color: #d7b392;
+      color: #2f261f;
+    }
+
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .info-section {
+      padding: 60px 20px;
+    }
+
+    .info-container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 26px;
+      border-radius: 22px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+    }
+
+    .info-card h2 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+      color: #5a4031;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #6b4d3a;
+      color: white;
+      padding: 18px;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2.7rem;
+      }
+
+      .nav-container {
+        gap: 10px;
+      }
+
+      .nav-links a {
+        margin-left: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-container">
+      <a class="brand" href="index.html">Noah Peterson</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="scratch.html">Buisness Ideas</a>
+        <a href="app.html">Game</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="hero-box">
+      <h1>Noah Peterson</h1>
+      <p class="hero-subtitle">All About Me</p>
+      <div class="button-row">
+        <a class="btn-primary" href="resume.html">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-container">
+      <div class="info-card">
+        <h2>About Me</h2>
+        <p>I am a BYU Finance Student. My goal is to eventually start my own business, but I am focused on in school for business consulting. </p>
+      </div>
+
+      <div class="info-card">
+        <h2>Resume</h2>
+        <p>Explore my education, work experience, and skills.</p>
+      </div>
+
+      <div class="info-card">
+        <h2>Game</h2>
+        <p>Play my game and guess who the current CEO of Vivint is.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer>
+    Copyright © Noah Peterson 2026
+  </footer>
+
+</body>
+</html>
