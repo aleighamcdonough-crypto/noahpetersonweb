@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the CEO</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f7f2ec, #dfc7b1);
+      color: #2f261f;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .topnav {
+      margin-bottom: 30px;
+    }
+
+    .topnav a {
+      text-decoration: none;
+      color: #6b4d3a;
+      font-weight: bold;
+      margin: 0 12px;
+    }
+
+    .game-box {
+      max-width: 650px;
+      margin: 0 auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #5a4031;
+    }
+
+    button {
+      background-color: #c79f7d;
+      color: #2f261f;
+      border: none;
+      padding: 14px 18px;
+      border-radius: 14px;
+      margin: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b88b66;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a> |
+    <a href="resume.html">Resume</a> |
+    <a href="app.html">Game</a>
+  </div>
+
+  <div class="game-box">
+    <h1>CEO QUIZ</h1>
+    <p>Who is the current CEO of Vivint?</p>
+
+    <button onclick="showResult('Try again!')">Sean Crain</button>
+    <button onclick="showResult('Try again!')">Richard Smith</button>
+     <button onclick="showResult('Correct!')">Todd Pederson</button>
+    <button onclick="showResult('Try again!')">David Bywater</button>
+    <button onclick="showResult('Try again!')">Ryan Moon</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function showResult(message) {
+      document.getElementById("result").innerText = message;
+    }
+  </script>
+
+</body>
+</html>
